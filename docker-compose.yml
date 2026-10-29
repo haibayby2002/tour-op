@@ -1,0 +1,69 @@
+# Full stack for local development:  docker compose up --build
+# Web: http://localhost:5180   API: http://localhost:8010   Admin: http://localhost:8010/admin
+# Host ports avoid common clashes and can be overridden, e.g. TOUROP_API_PORT=9000 docker compose up
+name: tour-op
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      # Internal database name/user kept from before the Tour-op rename (renaming would need a fresh volume).
+      POSTGRES_DB: tourops
+      POSTGRES_USER: tourops
+      POSTGRES_PASSWORD: tourops
+    ports: ["${TOUROP_DB_PORT:-5433}:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tourops"]
+      interval: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports: ["${TOUROP_REDIS_PORT:-6380}:6379"]
+
+  api:
+    build: ./backend
+    command: sh -c "python manage.py migrate && python manage.py seed_demo && daphne -b 0.0.0.0 -p 8000 config.asgi:application"
+    env_file: [./backend/.env.example]
+    environment: &backend-env
+      DATABASE_URL: postgres://tourops:tourops@postgres:5432/tourops
+      REDIS_URL: redis://redis:6379/0
+      DJANGO_DEBUG: "true"
+      # Sign in with Google: set GOOGLE_WEB_CLIENT_ID in ./.env (next to this file)
+      GOOGLE_CLIENT_IDS: ${GOOGLE_WEB_CLIENT_ID:-}
+    ports: ["${TOUROP_API_PORT:-8010}:8000"]
+    volumes: [media:/app/media]
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_started}
+
+  worker:
+    build: ./backend
+    command: celery -A config worker -l info
+    env_file: [./backend/.env.example]
+    environment: *backend-env
+    volumes: [media:/app/media]
+    depends_on: [api]
+
+  beat:
+    build: ./backend
+    command: celery -A config beat -l info
+    env_file: [./backend/.env.example]
+    environment: *backend-env
+    depends_on: [api]
+
+  web:
+    build: ./frontend
+    environment:
+      API_PROXY_TARGET: http://api:8000
+      VITE_GOOGLE_CLIENT_ID: ${GOOGLE_WEB_CLIENT_ID:-}
+    ports: ["${TOUROP_WEB_PORT:-5180}:5173"]
+    depends_on: [api]
+
+volumes:
+  # Keep the volumes created under the old project name, so existing data survives the rename.
+  pgdata:
+    name: tour-ops_pgdata
+  media:
+    name: tour-ops_media

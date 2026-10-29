@@ -1,0 +1,18 @@
+// Production hosting on Cloudflare: the built SPA (dist/) served as static assets.
+// Build with the production env first, then deploy:
+//   VITE_API_URL=https://api.tour-op.com VITE_GOOGLE_CLIENT_ID=... npm run build
+//   npx wrangler deploy
+{
+  "name": "tour-op",
+  "compatibility_date": "2026-10-06",
+  // Cloudflare creates the DNS records and certificates for these.
+  "routes": [
+    { "pattern": "tour-op.com", "custom_domain": true },
+    { "pattern": "www.tour-op.com", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "./dist",
+    // Unknown paths (e.g. /locals/5) return index.html so React Router handles them.
+    "not_found_handling": "single-page-application"
+  }
+}

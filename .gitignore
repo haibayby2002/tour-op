@@ -1,0 +1,42 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+
+# Node
+node_modules/
+dist/
+.expo/
+web-build/
+*.log
+
+# OAuth client secrets downloaded from Google Cloud
+google_auth_key.md
+client_secret*.json
+
+# Deployment secrets
+deploy.secrets.env
+google-services.json
+google-play-service-account.json
+*.keystore
+*.jks
+*.pem
+*.p12
+
+# Local tool state
+.wrangler/
+.claude/settings.local.json
+.dev.vars*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

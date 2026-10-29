@@ -1,0 +1,27 @@
+slug,city,name,name_vi,category,latitude,longitude,address,description,is_active
+ben-thanh-market,ho-chi-minh-city,Ben Thanh Market,Chợ Bến Thành,markets,10.772500,106.698000,"Lê Lợi, Bến Thành, Quận 1",Historic central market with food stalls and souvenirs,1
+binh-tay-market,ho-chi-minh-city,Binh Tay Market,Chợ Bình Tây,markets,10.749800,106.651100,"57A Tháp Mười, Quận 6",The big wholesale market of Chinatown (Cho Lon),1
+independence-palace,ho-chi-minh-city,Independence Palace,Dinh Độc Lập,history,10.777000,106.695300,"135 Nam Kỳ Khởi Nghĩa, Quận 1",Former presidential palace where the war ended in 1975,1
+war-remnants-museum,ho-chi-minh-city,War Remnants Museum,Bảo tàng Chứng tích Chiến tranh,history,10.779500,106.692100,"28 Võ Văn Tần, Quận 3",Museum about the Vietnam War and its effects,1
+saigon-notre-dame-cathedral,ho-chi-minh-city,Notre-Dame Cathedral Basilica of Saigon,Nhà thờ Đức Bà Sài Gòn,architecture,10.779800,106.699000,"01 Công xã Paris, Quận 1",French colonial red-brick cathedral,1
+saigon-central-post-office,ho-chi-minh-city,Saigon Central Post Office,Bưu điện Trung tâm Sài Gòn,architecture,10.779900,106.699900,"02 Công xã Paris, Quận 1",Colonial-era post office next to the cathedral,1
+nguyen-hue-walking-street,ho-chi-minh-city,Nguyen Hue Walking Street,Phố đi bộ Nguyễn Huệ,local-life,10.774300,106.703900,"Nguyễn Huệ, Quận 1",Pedestrian boulevard that comes alive in the evening,1
+jade-emperor-pagoda,ho-chi-minh-city,Jade Emperor Pagoda,Chùa Ngọc Hoàng,spiritual,10.791900,106.698300,"73 Mai Thị Lựu, Đa Kao, Quận 1",Atmospheric Taoist pagoda from 1909,1
+hoan-kiem-lake,hanoi,Hoan Kiem Lake,Hồ Hoàn Kiếm,history,21.028800,105.852200,"Hoàn Kiếm, Hà Nội",Heart of the Old Quarter,1
+hanoi-old-quarter,hanoi,Hanoi Old Quarter,Phố cổ Hà Nội,history,21.034000,105.850000,"Hoàn Kiếm, Hà Nội",The 36 guild streets and their street food,1
+dong-xuan-market,hanoi,Dong Xuan Market,Chợ Đồng Xuân,markets,21.038100,105.849600,"Đồng Xuân, Hoàn Kiếm",Largest covered market in Hanoi,1
+temple-of-literature,hanoi,Temple of Literature,Văn Miếu – Quốc Tử Giám,history,21.029300,105.835600,"58 Quốc Tử Giám, Đống Đa",Vietnam's first university (1076),1
+ho-chi-minh-mausoleum,hanoi,Ho Chi Minh Mausoleum,Lăng Chủ tịch Hồ Chí Minh,history,21.036800,105.834600,"2 Hùng Vương, Ba Đình",Mausoleum on Ba Dinh Square. Dress code applies,1
+tran-quoc-pagoda,hanoi,Tran Quoc Pagoda,Chùa Trấn Quốc,spiritual,21.047900,105.836900,"Thanh Niên, Tây Hồ",Oldest pagoda in Hanoi on West Lake,1
+vietnam-museum-of-ethnology,hanoi,Vietnam Museum of Ethnology,Bảo tàng Dân tộc học Việt Nam,history,21.040500,105.798600,"Nguyễn Văn Huyên, Cầu Giấy",The 54 ethnic groups of Vietnam,1
+dragon-bridge,danang,Dragon Bridge,Cầu Rồng,architecture,16.061100,108.227400,"Cầu Rồng, Hải Châu",Dragon-shaped bridge that breathes fire on weekend nights,1
+han-market,danang,Han Market,Chợ Hàn,markets,16.068300,108.224300,"119 Trần Phú, Hải Châu",Central market for local food and dried goods,1
+my-khe-beach,danang,My Khe Beach,Biển Mỹ Khê,beaches,16.059900,108.247400,"Võ Nguyên Giáp, Sơn Trà",Long city beach,1
+son-tra-peninsula,danang,Son Tra Peninsula,Bán đảo Sơn Trà,nature,16.120000,108.276000,"Sơn Trà, Đà Nẵng",Forested peninsula with langurs and viewpoints,1
+linh-ung-pagoda-son-tra,danang,Linh Ung Pagoda,Chùa Linh Ứng Sơn Trà,spiritual,16.100300,108.277900,"Hoàng Sa, Sơn Trà",Pagoda with a 67 m Lady Buddha statue,1
+marble-mountains,danang,Marble Mountains,Ngũ Hành Sơn,spiritual,16.003800,108.263200,"Huyền Trân Công Chúa, Ngũ Hành Sơn",Limestone hills with caves and pagodas,1
+hai-phong-opera-house,hai-phong,Hai Phong Opera House,Nhà hát Lớn Hải Phòng,architecture,20.857200,106.684200,"Quang Trung, Hồng Bàng",French colonial theatre in the city centre,1
+du-hang-pagoda,hai-phong,Du Hang Pagoda,Chùa Dư Hàng,spiritual,20.841300,106.689700,"121 Chùa Hàng, Lê Chân",Centuries-old pagoda,1
+do-son-beach,hai-phong,Do Son Beach,Bãi biển Đồ Sơn,beaches,20.711800,106.785100,"Đồ Sơn, Hải Phòng",Seaside town south of the city,1
+cat-ba-national-park,hai-phong,Cat Ba National Park,Vườn quốc gia Cát Bà,hiking,20.800000,106.995000,"Cát Bà, Cát Hải",Jungle trails on Cat Ba island,1
+lan-ha-bay,hai-phong,Lan Ha Bay,Vịnh Lan Hạ,nature,20.758000,107.067000,"Cát Bà, Cát Hải",Quieter neighbour of Ha Long Bay with kayaking,1
